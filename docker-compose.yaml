@@ -4,10 +4,7 @@ services:
     image: ortussolutions/commandbox:latest
     ports: 
       - "8080:8080"
-    container_name: texttpseech
-    environment:
-      - CFENGINE=adobe@2021.0.1+325996
-      - acceptEULA=YES
+    container_name: text-to-speech
     env_file:
       - ./config/.env
     volumes:
