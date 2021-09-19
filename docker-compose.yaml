@@ -1,0 +1,14 @@
+version: '3'
+services:
+  acf:
+    image: ortussolutions/commandbox:latest
+    ports: 
+      - "8080:8080"
+    container_name: texttpseech
+    environment:
+      - CFENGINE=adobe@2021.0.1+325996
+      - acceptEULA=YES
+    env_file:
+      - ./config/.env
+    volumes:
+      - ./www:/app
